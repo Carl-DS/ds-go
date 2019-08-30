@@ -1,0 +1,14 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>New I18n</h2>
+  
+    <form method="POST" action="insert">
+      <label> Code </label><input type="text" name="code" /><br />
+      <label> ZhCn </label><input type="text" name="zhCn" /><br />
+      <label> UsEn </label><input type="text" name="usEn" /><br />
+      <label> Project </label><input type="text" name="project" /><br />
+      <input type="submit" value="Save" />
+    </form>
+  {{ template "Footer" }}
+{{ end }}

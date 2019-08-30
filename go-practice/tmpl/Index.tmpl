@@ -1,0 +1,48 @@
+{{ define "Index" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+
+
+    <h2> Internationalization List</h2>
+    <input id="conditionInput" name="condition" placeholder="条件"></input><button onClick="select()">查询</button>
+    <hr/>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>Id</td>
+        <td>Code</td>
+        <td>ZhCn</td>
+        <td>UsEn</td>
+        <td>Project</td>
+        <td>CreatedAt</td>
+        <td>UpdatedAt</td>
+        <td>Operation</td>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .Id }}</td>
+        <td>{{ .Code }} </td>
+        <td>{{ .ZhCn }} </td>
+        <td>{{ .UsEn }} </td>
+        <td>{{ .Project }} </td>
+        <td>{{ .CreatedAt }} </td>
+        <td>{{ .UpdatedAt }} </td>
+        <td><a href="/show?id={{ .Id }}">View</a> | <a href="/edit?id={{ .Id }}">Edit</a><td>
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+
+    <script>
+        function select() {
+            let conditionVal = document.getElementById("conditionInput").value
+            if (conditionVal=="") {
+                return alert("请输入条件查询")
+            }
+            window.location.href = "/index?condition=" + conditionVal
+        }
+    </script>
+  {{ template "Footer" }}
+{{ end }}
