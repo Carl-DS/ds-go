@@ -1,0 +1,16 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Edit I18n</h2>
+  
+    <form method="POST" action="update">
+      <input type="hidden" name="uid" value="{{ .Id }}" />
+      <label> Code </label><input type="text" name="code" value="{{ .Code }}" readOnly /><br />
+      <label> ZhCn </label><input type="text" name="zhCn" value="{{ .ZhCn }}"  /><br />
+      <label> UsEn </label><input type="text" name="usEn" value="{{ .UsEn }}"  /><br />
+      <label> Project </label><input type="text" name="project" value="{{ .Project }}"  /><br />
+      <input type="submit" value="Save" />
+    </form><br />
+    <a href="/delete?id={{ .Id }}">Delete</a>
+  {{ template "Footer" }}
+{{ end }}
