@@ -6,6 +6,7 @@ require (
 	github.com/aliyun/aliyun-oss-go-sdk v1.9.8 // indirect
 	github.com/drone/routes v0.0.0-20130816182705-853bef2b2311
 	github.com/eclipse/paho.mqtt.golang v1.2.0
+	github.com/garyburd/redigo v1.6.0
 	github.com/go-redis/redis v6.15.2+incompatible // indirect
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/gorilla/context v1.1.1
