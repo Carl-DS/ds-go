@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"encoding/binary"
 	"go-practice/go_code/chatroom/common/message"
-	"go-practice/go_code/chatroom/utils"
+	"go-practice/go_code/chatroom/client/utils"
 )
 
 // 写一个函数,完成登录
